@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            
+        }       
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .counter-display {
+            font-size: 48px;
+            margin: 20px 0;
+            padding: 15px;
+            border: 3px solid #007bff;
+            border-radius: 10px;
+            background-color: #e9ecef;
+            color: #007bff;
+            transition: background-color 0.3s;
+        }
+        
+        .counter-display:hover {
+            background-color: #cfe2ff;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+            
+        }
+        
+        button:hover {
+            background-color: #0056b3;           
+        }
+              
+        
+        
+    </style>
+</head>
+<body>
+    <h2>COUNTER</h2>
+    <label id="counterLabel">0</label><br>
+    <div id="Container">
+        <button id="decreaseBtn">Decrease</button>
+        <button id="resetBtn">Reset</button>
+        <button id="increaseBtn">Increase</button>
+    </div> 
+
+
+
+    <script>
+
+
+        const increaseBtn = document.getElementById("increaseBtn");
+const decreaseBtn = document.getElementById("decreaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+const countLabel = document.getElementById("counterLabel");
+let count = 0;
+
+increaseBtn.onclick = function() {
+    count++;
+    countLabel.textContent = count;
+}
+
+decreaseBtn.onclick = function() {
+    count--;
+    countLabel.textContent = count;
+}
+
+resetBtn.onclick = function() {
+    count = 0;
+    countLabel.textContent = count;
+}
+
+
+
+
+    </script>
+</body>
+</html>
+
+
